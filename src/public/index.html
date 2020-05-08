@@ -6,27 +6,26 @@
     <title>יצירת ידיעות נטישה</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
-    <!-- <script src="main.js"></script> -->
   </head>
   <body>
-    <h1>מערכת יצירת ידיעות נטישה</h1>
-    <div>
-      שם: <input type="text" id="name" /> &nbsp;
-      <small
-        ><small
-          >שם זה ישמש כדי להפריד בין נטישות שאת\ה יצרת לבין אילו של אחרים</small
-        ></small
-      >
+    <div id="main">
+      <div id="title">
+        <h1>מערכת יצירת ידיעות נטישה</h1>
+      </div>
+      <div id="nameSpace-input"><center><input type="text" id="name"  placeholder="שם"/></center></div>
+      <center>
+      <div class="lable">בחר מיקום:</div>
+    </center>
+      <div class="areas">
+        <center>
+        <button id="createLebanon" class="area-button">דרום לבנון</button>
+        <button id="createSyria" class="area-button">דרום סוריה</button>
+        <button id="createIraq" class="area-button">עיראק</button>
+      </br>
+       <button id="clear" class="clear">מחק הכל</button></center>
+      </div>
+      <center><div class="result hidden"></div></center>
     </div>
-    <div>צור ידיעת נטישה ב:</div>
-    <div class="horizontalStack">
-      <button id="createLebanon">דרום לבנון</button>
-      <button id="createSyria">דרום סוריה</button>
-      <button id="createIraq">עיראק</button>
-      <button id="clear">מחק הכל</button>
-    </div>
-    <div class="result hidden"></div>
-
     <script src="./jquery/dist/jquery.js"></script>
     <script>
       let isWhileCreating = false;
@@ -58,7 +57,7 @@
           .html("Created Successfully");
         setInterval(() => {
           $(".result").addClass("hidden");
-        }, 3000);
+        }, 3500);
       }
       function reportFailure(reason, text) {
         let textToDisplay;
@@ -79,10 +78,10 @@
         $(".result")
           .removeClass("hidden")
           .addClass("failure")
-          .html(textToDisplay);
+          .html("Something went worng...");
         setInterval(() => {
           $(".result").addClass("hidden");
-        }, 3000);
+        }, 3500);
       }
       reportFailure.BAD_REQUEST = "400";
       reportFailure.SERVER_ERROR = "500";

@@ -1,10 +1,3 @@
-class Area {
-  top;
-  right;
-  bottom;
-  left;
-}
-
 let areas = {
   lebanon: {
     bottom: 31.41,
@@ -26,4 +19,4 @@ let areas = {
   },
 };
 
-module.exports = { areas };
+module.exports.areas = areas;

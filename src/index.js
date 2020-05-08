@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const ejection = require("./ejection");
-const areas = require("./areas.js");
+const areasModule = require("./areas.js");
 const genrateCoordModule = require("./random-generators");
 
 const app = express();
@@ -45,13 +45,13 @@ app.get("/:kind", (req, res) => {
     let area;
     switch (kind) {
       case "lebanon":
-        area = areas.lebanon;
+        area = areasModule.areas.lebanon;
         break;
       case "syria":
-        area = areas.syria;
+        area = areasModule.areas.syria;
         break;
       case "iraq":
-        area = areas.iraq;
+        area = areasModule.areas.iraq;
         break;
       default:
         res.status(404);
