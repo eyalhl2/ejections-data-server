@@ -27,7 +27,7 @@ div {
   padding-top: 1px;
   height: 80px;
 }
-}
+
 
 #nameSpace-input {
   top: 1cm;
@@ -72,7 +72,7 @@ div {
 
 .failure {
   border-color: darkred;
-  font-size: darkred;
+  font-size: 12px;
   background-color: lightcoral;
 }
 

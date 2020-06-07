@@ -27,7 +27,7 @@ div {
 
 .failure {
     border-color: darkred;
-    font-size: darkred;
+    font-size: 12px;
     background-color: lightcoral;
 }
 
